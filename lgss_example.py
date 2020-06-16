@@ -23,7 +23,7 @@ def init_model_params(Dx, Dy, r, obs, rs=npr.RandomState(0)):
         [0.0, dt, 0.0, 1.0],  # vy
     ]).T
 
-    Q = 0.001 * np.eye(Dx)
+    Q = 0.0 * np.eye(Dx)
     C = np.zeros((Dy, Dx))
     if obs == 'sparse':
         C[:Dy, :Dy] = np.eye(Dy)
@@ -168,7 +168,7 @@ if __name__ == '__main__':
     # Training parameters
     param_scale = 0.5
     num_epochs = 1_000_000
-    step_size = 0.001
+    step_size = 0.0001
     N = 256
 
     data_seed = npr.RandomState(0)

@@ -218,7 +218,7 @@ if __name__ == '__main__':
 
 
     def log_perf(combined_params, iter, grad):
-        progress.update(iter)
+        progress.update()
         if iter % 10 == 0:
             model_params, prop_params = combined_params
             elbo = objective(combined_params, iter)

@@ -23,7 +23,7 @@ def init_model_params(Dx, Dy, r, obs, rs=npr.RandomState(0)):
         [0.0, dt, 0.0, 1.0],  # vy
     ]).T
 
-    Q = np.zeros((Dx, Dx))
+    Q = 0.001 * np.eye(Dx)
     C = np.zeros((Dy, Dx))
     if obs == 'sparse':
         C[:Dy, :Dy] = np.eye(Dy)

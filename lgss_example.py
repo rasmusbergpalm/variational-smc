@@ -219,7 +219,7 @@ if __name__ == '__main__':
 
     def log_perf(combined_params, iter, grad):
         progress.update()
-        if iter % 10 == 0:
+        if iter % 100 == 0:
             model_params, prop_params = combined_params
             elbo = -objective(combined_params, iter)
             lml = log_marginal_likelihood(model_params, T, y_true)

@@ -159,7 +159,7 @@ class lgss_smc:
 
 if __name__ == '__main__':
     # Model hyper-parameters
-    T = 65
+    T = 16
     Dx = 4
     Dy = 2
     r = .1
@@ -168,7 +168,7 @@ if __name__ == '__main__':
     # Training parameters
     param_scale = 0.5
     num_epochs = 1_000_000
-    step_size = 0.0001
+    step_size = 0.001
     N = 256
 
     data_seed = npr.RandomState(0)
